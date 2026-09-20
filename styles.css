@@ -97,6 +97,15 @@ html,body{width:100%;height:100%;background:#0a0000;color:#fff;overflow:hidden;}
 #map-modal.on{display:flex;}
 .map-box{background:var(--bg3);border:1px solid rgba(255,255,255,0.08);border-radius:16px;padding:32px;max-width:900px;width:92vw;max-height:90vh;overflow-y:auto;position:relative;}
 .map-header{text-align:center;margin-bottom:24px;}
+
+.map-country-switch{display:flex;justify-content:center;gap:10px;margin-bottom:20px;}
+.map-country-btn{
+  background:var(--bg2);border:1px solid rgba(255,255,255,0.1);color:rgba(255,255,255,0.6);
+  padding:8px 18px;border-radius:20px;font-size:13px;font-weight:600;cursor:pointer;
+  transition:all .2s;
+}
+.map-country-btn:hover{color:#fff;border-color:rgba(255,255,255,0.25);}
+.map-country-btn.active{background:var(--red);border-color:var(--red);color:#fff;}
 .map-title{font-size:26px;font-weight:800;margin-bottom:6px;}
 .map-title em{color:var(--red2);font-style:normal;}
 .map-sub{font-size:13px;color:rgba(255,255,255,0.4);}

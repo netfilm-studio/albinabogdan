@@ -46,8 +46,23 @@ const CITIES = (function() {
     const c = КЛИЕНТ.городаАктивные[key];
     result[key] = { name: c.название, desc: c.описание, photos: c.фото };
   }
+  for (const key in (КЛИЕНТ.городаАктивныеТаиланд || {})) {
+    const c = КЛИЕНТ.городаАктивныеТаиланд[key];
+    result[key] = { name: c.название, desc: c.описание, photos: c.фото };
+  }
   return result;
 })();
+
+/* ═══ ПЕРЕКЛЮЧЕНИЕ СТРАНЫ НА КАРТЕ ЛЮБВИ ═══ */
+function switchMapCountry(country) {
+  document.getElementById('map-svg-kz').style.display = country === 'kz' ? 'block' : 'none';
+  document.getElementById('map-svg-th').style.display = country === 'th' ? 'block' : 'none';
+  document.getElementById('btn-country-kz').classList.toggle('active', country === 'kz');
+  document.getElementById('btn-country-th').classList.toggle('active', country === 'th');
+  // Закрыть открытую панель города при смене страны
+  const panel = document.getElementById('city-panel');
+  if (panel) panel.classList.remove('on');
+}
 
 /* ═══ ЗВУК ЗАПУСКА (как Mac) ═══ */
 function playStartupSound() {

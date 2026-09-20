@@ -93,7 +93,12 @@
       <div class="map-sub">Нажмите на город чтобы увидеть моменты</div>
     </div>
 
-    <svg class="kz-map-svg" viewBox="0 0 1000 500" xmlns="http://www.w3.org/2000/svg">
+    <div class="map-country-switch">
+      <button class="map-country-btn active" id="btn-country-kz" onclick="switchMapCountry('kz')">🇰🇿 Казахстан</button>
+      <button class="map-country-btn" id="btn-country-th" onclick="switchMapCountry('th')">🇹🇭 Таиланд</button>
+    </div>
+
+    <svg class="kz-map-svg" id="map-svg-kz" viewBox="0 0 1000 500" xmlns="http://www.w3.org/2000/svg">
   <defs>
     <filter id="neonGlow" x="-50%" y="-50%" width="200%" height="200%">
       <feGaussianBlur stdDeviation="2.5" result="blur"/>
@@ -190,6 +195,52 @@
     <circle cx="565.7" cy="443.8" r="5"/>
     <text x="565.7" y="431.8" text-anchor="middle">Шымкент</text>
   </g>
+</svg>
+
+<svg class="kz-map-svg" id="map-svg-th" viewBox="0 0 550 900" xmlns="http://www.w3.org/2000/svg" style="display:none;">
+  <path d="M 225 63
+    L 120 91
+    L 125 250
+    L 140 349
+    L 140 470
+    L 195 536
+    L 160 608
+    L 145 745
+    L 220 822
+    L 325 839
+    L 260 800
+    L 195 685
+    L 200 608
+    L 225 487
+    L 245 443
+    L 260 421
+    L 280 454
+    L 360 514
+    L 355 388
+    L 470 250
+    L 365 201
+    L 270 113
+    Z"
+    fill="none" stroke="#D32F2F" stroke-width="2.5" opacity="0.85" stroke-linejoin="round"/>
+
+  <g class="city-active" onclick="showCity('bangkok')">
+    <circle class="city-pulse" cx="260" cy="421" r="14" fill="#D32F2F" opacity="0.5"/>
+    <circle class="main" cx="260" cy="421" r="9" filter="url(#dotGlow)"/>
+    <text x="260" y="401" text-anchor="middle" font-size="16">Бангкок</text>
+  </g>
+  <g class="city-active" onclick="showCity('pattaya')">
+    <circle class="city-pulse" cx="280" cy="474" r="14" fill="#D32F2F" opacity="0.5"/>
+    <circle class="main" cx="280" cy="474" r="9" filter="url(#dotGlow)"/>
+    <text x="300" y="470" text-anchor="start" font-size="16">Паттайя</text>
+  </g>
+  <g class="city-active" onclick="showCity('kohlarn')">
+    <circle class="city-pulse" cx="258" cy="495" r="11" fill="#D32F2F" opacity="0.5"/>
+    <circle class="main" cx="258" cy="495" r="7" filter="url(#dotGlow)"/>
+    <text x="258" y="513" text-anchor="middle" font-size="14">Ко Ланг</text>
+  </g>
+
+  <line x1="260" y1="421" x2="280" y2="474" stroke="#D32F2F" stroke-width="2" stroke-dasharray="6 5" opacity="0.7" filter="url(#neonGlow)"/>
+  <line x1="280" y1="474" x2="258" y2="495" stroke="#D32F2F" stroke-width="2" stroke-dasharray="6 5" opacity="0.7" filter="url(#neonGlow)"/>
 </svg>
 
     <div class="city-panel" id="city-panel">

@@ -109,6 +109,34 @@ const КЛИЕНТ = {
     },
   },
 
+  // ─── КАРТА ЛЮБВИ — ТАИЛАНД ────────────────────
+  // Отдельная вкладка карты (переключается кнопкой над картой)
+  городаАктивныеТаиланд: {
+    bangkok: {
+      название: 'Бангкок',
+      описание: 'Побывали здесь один раз.',
+      фото: [
+        'media/cities/bangkok-1',
+      ],
+    },
+    pattaya: {
+      название: 'Паттайя',
+      описание: 'Были здесь дважды.',
+      фото: [
+        'media/cities/pattaya-1',
+        'media/cities/pattaya-2',
+      ],
+    },
+    kohlarn: {
+      название: 'Ко Ланг',
+      описание: 'Остров, где были дважды.',
+      фото: [
+        'media/cities/kohlarn-1',
+        'media/cities/kohlarn-2',
+      ],
+    },
+  },
+
 
   // ─── О НАС — карточки "текст + фото/видео" ────
   // Сколько угодно карточек. Чередуются зигзагом (обложка то слева, то справа) автоматически.
@@ -206,6 +234,7 @@ const КЛИЕНТ = {
   // ⚠️ клиент не присылал треки — уточните, если хотите добавить
   треки: [
     { название: 'Cigarettes After Sex — Apocalypse', фото: 'https://i.ytimg.com/vi/Z9EjDwwWVNQ/maxresdefault.jpg?sqp=-oaymwEmCIAKENAF8quKqQMa8AEB-AH-CYAC0AWKAgwIABABGGUgZShlMA8=&amp;rs=AOn4CLBdTEka9ShlQtJ7VqCuYvB1BGuclA', ссылка: 'https://open.spotify.com/track/3P5EAzNwT3tBafKX8xzyvf' },
+    { название: 'Вселенная бесконечна', фото: 'https://avatars.yandex.net/get-music-content/119639/286be578.a.5195131-1/m1000x1000', ссылка: 'https://open.spotify.com/track/5bkfPKnHLi6AUP3fJA5Xf5' },
   ],
 
   // ─── ФИЛЬМЫ/СЕРИАЛЫ, КОТОРЫЕ ГОТОВЫ ПЕРЕСМАТРИВАТЬ ────
@@ -220,6 +249,9 @@ const КЛИЕНТ = {
   // ⚠️ клиент упомянул чайный дом Teadot — уточните остальные места, если хотите добавить
   места: [
     { название: 'Teadot', фото: 'https://avatars.mds.yandex.net/get-altay/16021390/2a00000199a4c15f976cb62653391101df9a/orig', ссылка: 'https://2gis.kz/almaty/branches/70000001036796489' },
+    { название: 'Voronka', фото: 'https://avatars.mds.yandex.net/get-altay/15257527/2a00000195944381e878eca0ac0fb6ad169a/XXL_height', ссылка: 'https://2gis.kz/almaty/firm/70000001099447089' },
+    { название: 'Procoffee', фото: 'https://avatars.mds.yandex.net/get-altay/14506105/2a00000196ed116aef1b54910f13e51952a7/orig', ссылка: 'https://2gis.kz/almaty/firm/70000001097293522' },
+    { название: 'Marine Club', фото: 'https://wikicity.kz/fotos/Company_5790_DCQ8TGDvQVu565q5pVJNMaIi.jpeg', ссылка: 'https://2gis.kz/almaty/firm/70000001040692034/77.111559%2C43.892971?m=77.113595%2C43.893965%2F15' },
   ],
 
 
